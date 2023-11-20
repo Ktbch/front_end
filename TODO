@@ -1,0 +1,35 @@
+- Blog creation
+A blog is an Appliction that eables the user to posts an article for the consumption of other users guess users or original users
+- before a user can create an article he would have a profile an account thats enables him to create a blog
+- other users can read without loggin in but  cannot comment or like or create a post without having an account
+- additional feature a user is supposed to have a profile where he can mannage his post. mannage his comments and is likes it would have statics of the posts
+
+- pages to be needed
+
+- All blog page
+- profile Page
+- Register Page
+- login page
+
+- setUp routes
+
+1 User Account Feature
+
+- register / creation of account 
+- login / authentication & authoriazation
+
+
+todos
+
+- add active class to my header add a menu bar to my header
+
+
+backend 
+
+- create migrations to database
+- create different api-end points for the front end application
+
+- create user profile
+- add profilephoto upload
+
+- create Post functionlity
