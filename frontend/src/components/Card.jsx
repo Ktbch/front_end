@@ -11,7 +11,7 @@ export const Card = (props) => {
     const { accessToken } = useAuth()
 
     const getCommentCount = async () => {
-        const response = await fetch(`http://localhost:8080/api/v2/comments/count/${id}`)
+        const response = await fetch(`https://api-v2-fyq5.onrender.com/api/v2/comments/count/${id}`)
         const res = await response.json()
         setCommentCount(res.commentCount)
 
