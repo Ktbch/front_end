@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 
 var corOptions = {
-  origin: "https://the-blog-mx3v.onrender.com/",
+  origin: "*",
 };
 app.use(cors(corOptions));
 
