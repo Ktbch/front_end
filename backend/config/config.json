@@ -24,5 +24,6 @@
     "database": "postgressdatabse",
     "host": "dpg-clse7cb8d1es7396q8n0-a",
     "dialect": "postgres"
+    "port": 5432,
   }
 }
