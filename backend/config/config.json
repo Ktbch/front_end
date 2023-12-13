@@ -25,10 +25,4 @@
     "host": "dpg-clse7cb8d1es7396q8n0-a",
     "dialect": "postgres"
     "port": 5432,
-     "dialectOptions": {
-    "ssl": {
-      "require": true,
-      "rejectUnauthorized": false // You may need to adjust this based on Render's SSL settings
-    }
-  }
 }
