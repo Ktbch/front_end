@@ -44,7 +44,7 @@ export const Register = () => {
             body: JSON.stringify(request)
         }
         try {
-            const response = await fetch('http://localhost:8080/api/v2/users/register', requestOptions)
+            const response = await fetch('https://api-v2-fyq5.onrender.com/api/v2/users/register', requestOptions)
             if (response.ok) {
                 const res = await response.json()
                 console.log(res)
