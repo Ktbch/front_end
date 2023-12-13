@@ -16,7 +16,7 @@ export const UseLikeProvider = ({ children }) => {
   const fetchLikes = async (postId, requestOptions) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v2/likes/${postId}`,
+        `https://api-v2-fyq5.onrender.com/api/v2/likes/${postId}`,
         requestOptions
       );
       if (!response.ok) {
