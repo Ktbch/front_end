@@ -18,7 +18,7 @@ export const ArticleLikeBtn = (props) => {
         }
         if (!like) {
             try {
-                const response = await fetch(`http://localhost:8080/api/v2/likes/${postId}`, requestOptions)
+                const response = await fetch(`http://https://api-v2-fyq5.onrender.com/api/v2/likes/${postId}`, requestOptions)
                 if (!response.ok) {
                     throw new Error(response.status)
                 }
