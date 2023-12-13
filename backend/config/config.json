@@ -22,7 +22,7 @@
   "username": "postgressdatabse_user",
     "password": "PgrqBAsKSqJojobUh2JLGnR8fb4q0SaP",
     "database": "postgressdatabse",
-    "host": "dpg-clse7cb8d1es7396q8n0-a",
+    "host": "postgres://postgressdatabse_user:PgrqBAsKSqJojobUh2JLGnR8fb4q0SaP@dpg-clse7cb8d1es7396q8n0-a/postgressdatabse",
     "dialect": "postgres"
   }
 }
