@@ -31,7 +31,7 @@ export const UseAuthProvider = ({ children }) => {
     };
     try {
       const response = await fetch(
-        "http://localhost:8080/api/v2/users/users",
+        "https://api-v2-fyq5.onrender.com/api/v2/users/users",
         requestOptions
       );
       if (!response.ok) {
