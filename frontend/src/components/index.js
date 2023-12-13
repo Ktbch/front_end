@@ -1,4 +1,4 @@
 export { Form } from "./Forms";
-export { Header } from "./Header";
-export { Footer } from "./Footer";
+export { Header } from "./wrapper/Header";
+export { Footer } from "./wrapper/Footer";
 export { Card } from "./Card";

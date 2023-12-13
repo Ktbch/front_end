@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useRef } from "react"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {  UseLogin } from "../hooks/useLogin";
 
 
 export const Register = () => {

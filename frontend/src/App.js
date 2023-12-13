@@ -1,5 +1,5 @@
 import "./App.css";
-import { Header } from "./components";
+import { Footer, Header } from "./components/wrapper";
 import { AllRoutes } from "./routes/AllRoutes";
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
     <div className="h-[100vh] dark:bg-slate-700">
       <Header />
       <AllRoutes />
+      <Footer />
     </div>
   );
 }

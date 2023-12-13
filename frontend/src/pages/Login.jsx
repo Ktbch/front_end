@@ -3,20 +3,17 @@ import { useEffect, useRef } from "react"
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useAuth } from "../context/useAuthContext";
 
 
 export const Login = () => {
     const userName = useRef(null)
     const password = useRef(null)
+    const token = localStorage.getItem('token')
     const navigate = useNavigate()
+    const { addToken } = useAuth()
 
-    useEffect(() => {
-        const token = localStorage.getItem('token')
-        if (token) {
-            navigate('/')
 
-        }
-    })
 
     const loginUser = async (e) => {
 
@@ -41,29 +38,35 @@ export const Login = () => {
 
         try {
             const response = await fetch('http://localhost:8080/api/v2/users/login', requestOptions)
-            if (response.ok) {
-                const res = await response.json()
-                const token = res.token
-                if (token) {
-                    toast.success('you are loggined')
-                    await localStorage.setItem('username', res.user.username)
-                    await localStorage.setItem('token', token)
-                    await localStorage.setItem('id', res.user.id)
-                    navigate('/')
-
-                } else {
-                    toast.error('invalid details')
-                }
-            } else {
-                if (response.status === 401) {
-                    toast.error('invalid details')
-                }
+            if (!response.ok) {
+                throw new Error(`response error ${response.status}`)
             }
+
+
+            const res = await response.json()
+            console.log(res)
+            const token = res.token
+            if (token) {
+                localStorage.setItem('token', token)
+                addToken(token)
+                toast.success('you are loggined')
+                navigate('/')
+            }
+
+
         } catch (error) {
             console.error(error);
-            toast.error('An error occurred while logging in');
+            toast.error('invalid details')
+            return
+
+
         }
     }
+    useEffect(() => {
+        if (token) {
+            navigate('/')
+        }
+    })
 
     return (
         <>

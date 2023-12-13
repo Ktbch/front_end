@@ -2,9 +2,11 @@ import { useNavigate } from "react-router-dom"
 import { useEffect, useRef } from "react"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useTitle } from "../hooks/useTitle";
 
 export const CreateArticle = () => {
     const navigate = useNavigate()
+    useTitle('create-article')
 
     const content = useRef(null)
     const title = useRef(null)
