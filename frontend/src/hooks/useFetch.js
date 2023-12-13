@@ -12,7 +12,7 @@ export const useFetch = (
   const [error, setError] = useState(null);
   const [commentCount, setCommentCount] = useState(0);
 
-  const api = `http://localhost:8080/api/v2/${resourcePath}/${apiPath}`;
+  const api = `https://api-v2-fyq5.onrender.com/api/v2/${resourcePath}/${apiPath}`;
 
   const fetchData = async () => {
     try {
