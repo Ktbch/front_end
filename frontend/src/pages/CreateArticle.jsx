@@ -36,7 +36,7 @@ export const CreateArticle = () => {
             body: JSON.stringify(request)
         }
         try {
-            const response = await fetch('http://localhost:8080/api/v2/article/create-article', requestOptions)
+            const response = await fetch('https://api-v2-fyq5.onrender.com/api/v2/article/create-article', requestOptions)
             if (response.ok) {
                 toast.success('Artice succuessfully created')
                 console.log(localStorage.getItem('token'))
